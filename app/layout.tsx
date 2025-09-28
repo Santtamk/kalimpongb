@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Kalimpong Bungalow",
     images: [
       {
-        url: "/img/logo.jpeg", // 1200×630 (JPG/PNG/WebP)
+        url: "/og-image.jpg", // 1200×630 (JPG/PNG/WebP)
         width: 1200,
         height: 630,
         alt: "Kalimpong Bungalow – Cultural Bed & Breakfast",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Kalimpong Bungalow - Cultural Bed & Breakfast",
     description:
       "Heritage, culture, and calm—your peaceful retreat in Kalimpong.",
-    images: ["/img/logo.jpeg"], // 1200×675 (JPG/PNG/WebP)
+    images: ["/og-image.jpg"],
   },
 };
 
