@@ -17,8 +17,15 @@ const eslintConfig = [
       ".next/**",
       "out/**",
       "build/**",
+      "public/**",
       "next-env.d.ts",
     ],
+    rules: {
+      "@next/next/no-img-element": "off",
+      "@next/next/no-css-tags": "off",
+      "@next/next/no-page-custom-font": "off",
+      "react/no-unescaped-entities": "off",
+    },
   },
 ];
 

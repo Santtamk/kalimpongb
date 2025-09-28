@@ -1,0 +1,95 @@
+/*============================================================================================*/
+/* Your custom styles below */
+/*============================================================================================*/
+
+/* Remove default browser margins that create an extra scroll on large screens */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Guard against tiny overflows from parallax/kenburns transforms */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure the hero carousel does not leak extra pixels */
+#carousel-home {
+  overflow: hidden;
+}
+
+/* Brand variables for easy theming */
+:root {
+  /* Match this to your logo background color */
+  --brand-bg: #faf8f5; /* template base background */
+}
+
+/* Make header logos a bit smaller on small phones */
+@media (max-width: 575.98px) {
+  .fixed_header .logo_normal img,
+  .fixed_header .logo_sticky img {
+    width: 140px !important;
+    height: auto !important;
+  }
+  /* Off-canvas menu logo sizing */
+  .main-menu .logo_panel img {
+    width: 150px !important;
+    height: auto !important;
+  }
+}
+
+/* Make the small-screen menu background match the logo/brand background */
+@media (max-width: 991.98px) {
+  .main-menu {
+    background-color: var(--brand-bg) !important;
+  }
+  .main-menu #mainNav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .main-menu .logo_panel {
+    background: transparent !important;
+  }
+  /* Keep menu links readable on the brand background */
+  .main-menu #mainNav ul li a {
+    color: #333 !important;
+  }
+}
+
+/* ---------- Preloader tuning + logo animation ---------- */
+.preloader-overlay {
+  /* Keep template base styles (#preloader) but allow us to center content */
+  display: grid;
+  place-items: center;
+  background-color: #292b33; /* matches template */
+}
+.preloader-logo-wrap {
+  text-align: center;
+}
+.preloader-logo {
+  animation: preloaderPulse 1.1s ease-in-out infinite;
+  transform-origin: center;
+  opacity: 0.9;
+}
+@keyframes preloaderPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+/* Make the preloader exit faster when template toggles the .loaded state */
+#preloader.loaded {
+  animation-duration: 0.4s !important;
+  transition-delay: 0s !important;
+}
