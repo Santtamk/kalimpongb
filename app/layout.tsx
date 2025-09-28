@@ -11,22 +11,57 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Bed and Breakfast Single page",
-  description: "Simple and easy to edit Bed and Breakfast site template",
+  title: "Kalimpong Bungalow - Cultural Bed & Breakfast",
+  description:
+    "Kalimpong Bungalow – a serene, cultural bed & breakfast in the hills.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
     apple: [
-      { url: "/img/apple-touch-icon-57x57-precomposed.png" },
-      { url: "/img/apple-touch-icon-72x72-precomposed.png", sizes: "72x72" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
       {
-        url: "/img/apple-touch-icon-114x114-precomposed.png",
-        sizes: "114x114",
+        rel: "android-chrome",
+        url: "/android-chrome-192x192.png",
+        sizes: "192x192",
       },
       {
-        url: "/img/apple-touch-icon-144x144-precomposed.png",
-        sizes: "144x144",
+        rel: "android-chrome",
+        url: "/android-chrome-512x512.png",
+        sizes: "512x512",
       },
     ],
+  },
+  manifest: "/site.webmanifest",
+  themeColor: "#ffffff",
+
+  // Social share previews
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "Kalimpong Bungalow - Cultural Bed & Breakfast",
+    description:
+      "Heritage, culture, and calm—your peaceful retreat in Kalimpong.",
+    siteName: "Kalimpong Bungalow",
+    images: [
+      {
+        url: "/og-image.jpg", // 1200×630 (JPG/PNG/WebP)
+        width: 1200,
+        height: 630,
+        alt: "Kalimpong Bungalow – Cultural Bed & Breakfast",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kalimpong Bungalow - Cultural Bed & Breakfast",
+    description:
+      "Heritage, culture, and calm—your peaceful retreat in Kalimpong.",
+    images: ["/og-image.jpg"],
   },
 };
 
