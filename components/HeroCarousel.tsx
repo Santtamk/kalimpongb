@@ -11,7 +11,7 @@ export default function HeroCarousel() {
         <div
           className="owl-slide background-image relative bg-cover bg-center
                      !min-h-[100dvh] md:!min-h-[70vh] lg:!min-h-[80vh]"
-          data-background="url(/img/slides/slide_2.JPG)"
+          data-background="url(/img/slides/slide_2.jpg)"
         >
           <div
             className="opacity-mask flex items-center h-full"
@@ -46,7 +46,7 @@ export default function HeroCarousel() {
         <div
           className="owl-slide background-image relative bg-cover bg-center
                      !min-h-[100dvh] md:!min-h-[70vh] lg:!min-h-[80vh]"
-          data-background="url(/img/slides/slide_1.JPG)"
+          data-background="url(/img/slides/slide_1.jpg)"
         >
           <div
             className="opacity-mask flex items-center h-full"
@@ -81,7 +81,7 @@ export default function HeroCarousel() {
         <div
           className="owl-slide background-image relative bg-cover bg-center
                      !min-h-[100dvh] md:!min-h-[70vh] lg:!min-h-[80vh]"
-          data-background="url(/img/slides/slide_3.JPG)"
+          data-background="url(/img/slides/slide_3.jpg)"
         >
           <div
             className="opacity-mask flex items-center h-full"
