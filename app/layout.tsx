@@ -11,6 +11,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kalimpongbungalow.vercel.app/"),
   title: "Kalimpong Bungalow - Cultural Bed & Breakfast",
   description:
     "Kalimpong Bungalow – a serene, cultural bed & breakfast in the hills.",
