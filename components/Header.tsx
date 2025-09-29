@@ -11,18 +11,18 @@ export default function Header() {
           <div className="col-md-3 col-5">
             <a href="#" className="logo_normal">
               <img
-                src="/img/logo-removebg-small.png"
-                width="180"
-                height="34"
+                src="/img/logo-removebg-small1.png"
+                width="150"
+                height="30"
                 alt=""
                 className="img-fluid"
               />
             </a>
             <a href="#" className="logo_sticky">
               <img
-                src="/img/logo-removebg-small.png"
-                width="180"
-                height="34"
+                src="/img/logo-removebg-small1.png"
+                width="150"
+                height="30"
                 alt=""
                 className="img-fluid"
               />
