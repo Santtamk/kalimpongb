@@ -33,11 +33,7 @@ const testimonialsData = [
 
 export default function TestimonialsParallax() {
   return (
-    <div
-      className="parallax_section_1 jarallax"
-      data-jarallax
-      data-speed="0.2"
-    >
+    <div className="parallax_section_1 jarallax" data-jarallax data-speed="0.2">
       <img
         className="jarallax-img kenburns-2"
         src="/img/testimonials/testimonials_bg.jpg"
