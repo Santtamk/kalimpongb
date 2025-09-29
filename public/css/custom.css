@@ -93,3 +93,88 @@ body {
   animation-duration: 0.4s !important;
   transition-delay: 0s !important;
 }
+
+/* HEADER PADDING FIX - Reduce excessive header padding */
+header.fixed_header {
+  padding: 8px 0 !important;
+}
+
+/* Even less padding on larger screens */
+@media (min-width: 768px) {
+  header.fixed_header {
+    padding: 5px 0 !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.fixed_header {
+    padding: 3px 0 !important;
+  }
+}
+
+/* TESTIMONIALS MOBILE FIX - Prevent content cutoff */
+@media (max-width: 767px) {
+  .parallax_section_1 {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding: 40px 0 !important;
+  }
+
+  .parallax_section_1 .wrapper {
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .box_overlay {
+    padding: 25px !important;
+    min-height: auto !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+
+  .pic {
+    position: static !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+
+  .pic figure {
+    margin-bottom: 10px !important;
+  }
+}
+
+/* Extra small screens optimization */
+@media (max-width: 575px) {
+  .parallax_section_1 {
+    padding: 30px 0 !important;
+    min-height: 90vh !important;
+  }
+
+  .box_overlay {
+    padding: 20px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .title.white h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 30px !important;
+  }
+
+  .comment {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* Ensure carousel works properly on mobile */
+@media (max-width: 767px) {
+  .carousel_testimonials {
+    margin-top: 20px !important;
+  }
+
+  .owl-dots {
+    margin-top: 30px !important;
+  }
+}

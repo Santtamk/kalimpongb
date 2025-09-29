@@ -45,13 +45,13 @@ export default function RoomsSection() {
       images: ["/img/rooms/2.jpg", "/img/rooms/opt_2.jpg"],
       inverted: true,
     },
-    // {
-    //   id: 3,
-    //   name: "Superior Room",
-    //   price: "From $230/night",
-    //   desc: "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
-    //   images: ["/img/rooms/3.jpg", "/img/rooms/opt_3.jpg"],
-    // },
+    {
+      id: 3,
+      name: "Standard Double Room",
+      price: "From ₹₹₹₹/night",
+      desc: "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
+      images: ["/img/rooms/3.jpg", "/img/rooms/opt_3.jpg"],
+    },
   ];
 
   // Facilities list — 1st item has no-border as per the template
@@ -135,7 +135,7 @@ export default function RoomsSection() {
                         <i className="customicon-double-bed"></i> King Size Bed
                       </li>
                       <li>
-                        <i className="-customicon-wifi"></i> Free Wifi
+                        <i className="customicon-wifi"></i> Free Wifi
                       </li>
                     </ul>
                   </div>

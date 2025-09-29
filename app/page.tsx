@@ -14,7 +14,10 @@ export default function Home() {
   return (
     <>
       <Preloader />
+      <div className="">
+
       <Header />
+      </div>
 
       <main>
         <HeroCarousel />
