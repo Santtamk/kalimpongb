@@ -18,9 +18,9 @@ export default function AboutSection() {
       noBorder: true,
     },
     {
-      iconClass: "icon-hotel-disable",
-      title: "Accessible",
-      text: "Designed with care, our spaces ensure easy access and thoughtful amenities for all our guests.",
+      iconClass: "bi bi-tree",
+      title: "Nature & Garden",
+      text: "Immerse yourself in our lush garden spaces and embrace the tranquil beauty of nature surrounding our heritage bungalow.",
       noBorder: true,
     },
     {
