@@ -2,6 +2,42 @@
  * Header
  * Fixed header with logo, hamburger, and main navigation. Markup preserved to match original template.
  */
+
+// Navigation items data map
+const navigationItems = [
+  {
+    id: 1,
+    label: "About",
+    href: "#about",
+    className: "js-scroll-trigger animated_link",
+  },
+  {
+    id: 2,
+    label: "Rooms",
+    href: "#rooms",
+    className: "js-scroll-trigger animated_link",
+  },
+  {
+    id: 3,
+    label: "Gallery",
+    href: "#gallery",
+    className: "js-scroll-trigger animated_link",
+  },
+  {
+    id: 4,
+    label: "Contacts",
+    href: "#contacts",
+    className: "js-scroll-trigger animated_link",
+  },
+  {
+    id: 5,
+    label: "Book Now",
+    href: "#booking_section",
+    className: "js-scroll-trigger btn_1",
+    isButton: true,
+  },
+];
+
 export default function Header() {
   return (
     <header className="fixed_header menu_v1">
@@ -44,55 +80,13 @@ export default function Header() {
               </div>
               <nav id="mainNav">
                 <ul>
-                  <li>
-                    <a
-                      href="#about"
-                      className="js-scroll-trigger animated_link"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#rooms"
-                      className="js-scroll-trigger animated_link"
-                    >
-                      Rooms
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#gallery"
-                      className="js-scroll-trigger animated_link"
-                    >
-                      Gallery
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#amenities"
-                      className="js-scroll-trigger animated_link"
-                    >
-                      Activities
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#contacts"
-                      className="js-scroll-trigger animated_link"
-                    >
-                      Contacts
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#booking_section"
-                      className="js-scroll-trigger btn_1"
-                    >
-                      Book Now
-                    </a>
-                  </li>
+                  {navigationItems.map((item) => (
+                    <li key={item.id}>
+                      <a href={item.href} className={item.className}>
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </nav>
             </div>
