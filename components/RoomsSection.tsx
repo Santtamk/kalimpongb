@@ -34,7 +34,7 @@ export default function RoomsSection() {
       name: "Double Room with Balcony",
       price: "From ₹₹₹₹/night",
       desc: "A cozy 28 m² retreat with a large double bed, private bathroom, and balcony view. Perfect for couples or solo travelers looking for a peaceful, simple, and homely stay. Thoughtfully equipped with fresh linen, a wardrobe, and an electric kettle for your comfort.",
-      images: ["/img/rooms/1.jpg", "/img/rooms/opt_1.jpg"],
+      images: ["/img/gallery/32.jpg", "/img/gallery/33.jpg"],
       delay: "300",
     },
     {
@@ -50,7 +50,7 @@ export default function RoomsSection() {
       name: "Standard Double Room",
       price: "From ₹₹₹₹/night",
       desc: "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
-      images: ["/img/rooms/3.jpg", "/img/rooms/opt_3.jpg"],
+      images: ["/img/gallery/15.jpg", "/img/gallery/24.jpg"],
     },
   ];
 
@@ -58,24 +58,24 @@ export default function RoomsSection() {
   const facilities: Facility[] = [
     {
       iconClass: "customicon-bath-tub",
-      title: "Large Bath Room",
-      text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+      title: "Clean & Hygienic Rooms",
+      text: "We maintain the highest standards of cleanliness and hygiene in all our rooms and bathrooms for your safety and comfort.",
       noBorder: true,
     },
     {
       iconClass: "customicon-wifi",
-      title: "High Speed Wifi",
-      text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.",
+      title: "Complimentary WiFi",
+      text: "Stay connected with reliable high-speed internet access available throughout the property at no additional charge.",
     },
     {
-      iconClass: "customicon-air-condition",
-      title: "Air Condition",
-      text: "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      iconClass: "customicon-breakfast",
+      title: "Breakfast Included",
+      text: "Start your day right with a complimentary breakfast featuring fresh local ingredients and traditional flavors.",
     },
     {
-      iconClass: "customicon-washing-machine",
-      title: "Wahsing Machine",
-      text: "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.",
+      iconClass: "customicon-luggage",
+      title: "Room Service",
+      text: "Enjoy convenient room service for meals, refreshments, and any assistance you need during your stay.",
     },
   ];
 
