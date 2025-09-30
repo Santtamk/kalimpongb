@@ -260,7 +260,7 @@ header.fixed_header {
   .room-image-container {
     padding-bottom: 60% !important; /* Slightly different ratio on tablets */
   }
-  
+
   .carousel_item_1 .item {
     min-height: 250px !important;
   }
@@ -270,7 +270,7 @@ header.fixed_header {
   .room-image-container {
     padding-bottom: 56.25% !important; /* 16:9 ratio on mobile */
   }
-  
+
   .carousel_item_1 .item {
     min-height: 200px !important;
   }
@@ -280,7 +280,7 @@ header.fixed_header {
   .room-image-container {
     padding-bottom: 75% !important; /* 4:3 ratio on small mobile */
   }
-  
+
   .carousel_item_1 .item {
     min-height: 180px !important;
   }

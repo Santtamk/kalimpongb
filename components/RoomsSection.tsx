@@ -116,8 +116,8 @@ export default function RoomsSection() {
                     <div className="item" key={idx}>
                       <a data-fslightbox={group} data-type="image" href={src}>
                         <div className="room-image-container">
-                          <img 
-                            src={src} 
+                          <img
+                            src={src}
                             alt={`${room.name} - Image ${idx + 1}`}
                             className="room-image"
                           />
