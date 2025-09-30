@@ -42,7 +42,7 @@ export default function RoomsSection() {
       name: "Deluxe Double Room with Balcony",
       price: "From ₹₹₹₹/night",
       desc: "A more spacious 28 m² room offering refined comfort with a large double bed, private bathroom, and scenic balcony. Ideal for guests who want a little extra elegance while enjoying Kalimpong’s charm. Complete with soft linens, a wardrobe, and modern amenities for a relaxed yet indulgent stay.",
-      images: ["/img/gallery/10.jpg", "/img/rooms/opt_2.jpg"],
+      images: ["/img/gallery/10.jpg", "/img/gallery/12.jpg"],
       inverted: true,
     },
     {
@@ -115,7 +115,13 @@ export default function RoomsSection() {
                   {room.images.map((src, idx) => (
                     <div className="item" key={idx}>
                       <a data-fslightbox={group} data-type="image" href={src}>
-                        <img src={src} alt="" />
+                        <div className="room-image-container">
+                          <img
+                            src={src}
+                            alt={`${room.name} - Image ${idx + 1}`}
+                            className="room-image"
+                          />
+                        </div>
                       </a>
                     </div>
                   ))}
