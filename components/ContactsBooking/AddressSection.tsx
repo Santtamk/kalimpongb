@@ -18,7 +18,7 @@ export default function AddressSection() {
           Kalimpong -734301
         </p>
         <div className="phone_element no_borders">
-          <a href="tel://423424234">
+          <a href="tel://+917908676707">
             <i className="bi bi-telephone"></i>
             <span>
               <em>Bookings</em>+91 7908676707
@@ -26,14 +26,42 @@ export default function AddressSection() {
           </a>
         </div>
         <div className="phone_element no_borders">
-          <a href="mailto:info@domain.com">
+          <a href="mailto:kalimpongbungalow@gmail.com">
             <i className="bi bi-envelope"></i>
             <span>
               <em>Questions</em>kalimpongbungalow@gmail.com
             </span>
           </a>
         </div>
-        <div className="social mt-1">
+
+        {/* Check-in and Check-out Information */}
+        <div className="phone_element no_borders ">
+          <a href="#0">
+            <i className="bi bi-clock"></i>
+            <span>
+              <em>Check-in</em>From 12:00 to 19:00
+              <small
+                className="d-inline-block ms-2 text-info !cursor-pointer !hover:scale-105"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="You'll need to let the property know in advance what time you'll arrive."
+                style={{ cursor: "info" }}
+              >
+                <i className="bi bi-info-circle"></i>
+              </small>
+            </span>
+          </a>
+        </div>
+        <div className="phone_element no_borders !pointer-events-none !cursor-default">
+          <a href="#0">
+            <i className="bi bi-clock-history"></i>
+            <span>
+              <em>Check-out</em>From 06:00 to 11:00
+            </span>
+          </a>
+        </div>
+
+        <div className="social mt-4">
           <ul>
             <li>
               <a href="#0">
