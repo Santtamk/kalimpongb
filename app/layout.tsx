@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Caveat, Montserrat } from "next/font/google";
 import "./globals.css";
@@ -38,7 +38,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-  themeColor: "#ffffff",
 
   // Social share previews
   openGraph: {
@@ -64,6 +63,10 @@ export const metadata: Metadata = {
       "Heritage, culture, and calm—your peaceful retreat in Kalimpong.",
     images: ["/og-image.jpg"],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
