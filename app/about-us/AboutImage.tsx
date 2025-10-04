@@ -42,7 +42,8 @@ const AboutImage: React.FC<AboutImageProps> = ({
   const desktop = isString ? image : image.desktop;
   const mobile = isString ? image : image.mobile ?? image.desktop;
 
-  const lgDir = imagePosition === "left" ? "lg:flex-row" : "lg:flex-row-reverse";
+  const lgDir =
+    imagePosition === "left" ? "lg:flex-row" : "lg:flex-row-reverse";
 
   return (
     <section
@@ -57,19 +58,29 @@ const AboutImage: React.FC<AboutImageProps> = ({
           style={{ backgroundImage: `url(${mobile})` }}
           aria-hidden="true"
         >
-          <div className="absolute inset-0 bg-black opacity-60" aria-hidden="true" />
+          <div
+            className="absolute inset-0 bg-black opacity-60"
+            aria-hidden="true"
+          />
         </div>
 
         <div className="relative z-10 px-6 py-10 text-center w-full max-w-4xl flex flex-col items-center justify-center">
-          <h2 id={headingId} className="text-3xl sm:text-4xl font-bold text-white mb-4 drop-shadow-lg">
+          <h2
+            id={headingId}
+            className="text-3xl sm:text-4xl font-bold text-white mb-4 drop-shadow-lg"
+          >
             {title}
           </h2>
-          <p className="text-base sm:text-lg text-white drop-shadow leading-relaxed">{body}</p>
+          <p className="text-base sm:text-lg text-white drop-shadow leading-relaxed">
+            {body}
+          </p>
         </div>
       </div>
 
       {/* Large screens: side-by-side */}
-      <div className={`hidden lg:flex items-center gap-8 px-6 lg:px-12 py-12 ${lgDir}`}>
+      <div
+        className={`hidden lg:flex items-center gap-8 px-6 lg:px-12 py-12 ${lgDir}`}
+      >
         {/* Image column */}
         <div className="w-full lg:w-1/2 flex-shrink-0">
           <img
@@ -87,7 +98,9 @@ const AboutImage: React.FC<AboutImageProps> = ({
             <h2 id={headingId} className="text-3xl md:text-4xl font-bold mb-4">
               {title}
             </h2>
-            <p className="text-base md:text-lg leading-relaxed text-slate-700">{body}</p>
+            <p className="text-base md:text-lg leading-relaxed text-slate-700">
+              {body}
+            </p>
           </div>
         </div>
       </div>
