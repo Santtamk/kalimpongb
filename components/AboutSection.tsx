@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * AboutSection
  * Intro section with images and facility boxes. Markup preserved to match styles and JS hooks.
@@ -75,7 +77,9 @@ export default function AboutSection() {
                 and every guest is welcomed like family.
               </p>
               <p>
-                <em>YourName...the Owner</em>
+                <Link href={"/about-us"}>
+                  <em>Read more</em>
+                </Link>
               </p>
             </div>
           </div>
