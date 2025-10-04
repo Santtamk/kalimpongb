@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Caveat, Montserrat } from "next/font/google";
 import "./globals.css";
+import MapAndFooter from "@/components/MapAndFooter";
+import Preloader from "@/components/Preloader";
+import Header from "@/components/Header";
 
 // Fonts must be declared at module scope
 const caveat = Caveat({ subsets: ["latin"], weight: ["400", "500"] });
@@ -90,7 +93,11 @@ export default function RootLayout({
         data-bs-target="#mainNav"
         className={`${caveat.className} ${montserrat.className}`}
       >
+        <Preloader />
+
+        <Header />
         {children}
+        <MapAndFooter />
         {/* COMMON SCRIPTS from template (order matters) */}
         <Script src="/js/common_scripts.js" strategy="afterInteractive" />
         <Script src="/js/common_functions.js" strategy="afterInteractive" />

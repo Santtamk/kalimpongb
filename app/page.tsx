@@ -13,11 +13,7 @@ import MapAndFooter from "../components/MapAndFooter";
 export default function Home() {
   return (
     <>
-      <Preloader />
-      <div className="">
-
-      <Header />
-      </div>
+    
 
       <main>
         <HeroCarousel />
@@ -36,7 +32,7 @@ export default function Home() {
 
         <ContactsBooking />
       </main>
-      <MapAndFooter />
+
     </>
   );
 }
