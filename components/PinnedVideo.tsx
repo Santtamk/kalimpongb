@@ -70,7 +70,7 @@ export default function PinnedVideo() {
 
   return (
     <div className="bg_white">
-      <div className="pinned-image pinned-image--medium">
+      <div className="pinned-image pinned-image--medium w-screen">
         <div className="pinned-image__container" id="section_video">
           <video
             ref={videoRef}
@@ -78,6 +78,7 @@ export default function PinnedVideo() {
             autoPlay
             playsInline
             id="video_home"
+            className="w-full h-full object-cover"
             key={currentVideoIndex} // Force re-render when video changes
           >
             <source src={videos[currentVideoIndex]} type="video/mp4" />
