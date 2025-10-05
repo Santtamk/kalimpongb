@@ -20,6 +20,14 @@ body {
   overflow: hidden;
 }
 
+/* Full-width pinned video on SPA navigation */
+.pinned-image {
+  width: 100vw !important; /* span the full viewport width */
+}
+.pinned-image__container {
+  transform: none !important; /* avoid initial 0.8 scale shrinking width */
+}
+
 /* Brand variables for easy theming */
 :root {
   /* Match this to your logo background color */
