@@ -97,7 +97,7 @@ export default function RootLayout({
         <Preloader />
 
         <Header />
-  <RouteReinit />
+        <RouteReinit />
         {children}
         <MapAndFooter />
         {/* COMMON SCRIPTS from template (order matters) */}

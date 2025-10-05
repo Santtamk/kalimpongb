@@ -147,7 +147,9 @@ export default function RouteReinit() {
 
       // Re-bind video autoplay on scroll for #section_video
       try {
-        const vids = document.querySelectorAll<HTMLVideoElement>("#section_video video");
+        const vids = document.querySelectorAll<HTMLVideoElement>(
+          "#section_video video"
+        );
         if (vids.length) {
           vids.forEach((v) => {
             v.setAttribute("webkit-playsinline", "");
@@ -177,10 +179,10 @@ export default function RouteReinit() {
       try {
         // mimic the pinned-image init from common_functions with GSAP/ScrollTrigger
         // If those globals are available they’ll recreate the timeline
-        const pinnedImages = document.querySelectorAll('.pinned-image');
+        const pinnedImages = document.querySelectorAll(".pinned-image");
         // If there are pinned images and gsap is loaded, trigger a resize to recalc layouts
         if (pinnedImages.length) {
-          window.dispatchEvent(new Event('resize'));
+          window.dispatchEvent(new Event("resize"));
         }
       } catch {}
     };

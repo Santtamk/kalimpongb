@@ -34,7 +34,9 @@ export default function HeroCarousel() {
     const tryInit = () => {
       if (disposed) return;
       const w: WindowWithJQuery | undefined =
-        typeof window !== "undefined" ? (window as WindowWithJQuery) : undefined;
+        typeof window !== "undefined"
+          ? (window as WindowWithJQuery)
+          : undefined;
       const $ = w?.jQuery || w?.$;
       if (!$) {
         if (attempts < 15) {
@@ -50,7 +52,9 @@ export default function HeroCarousel() {
           const color = $(this).attr("data-opacity-mask");
           if (color) $(this).css("background-color", color);
         });
-        $("#carousel-home .background-image").each(function (this: HTMLElement) {
+        $("#carousel-home .background-image").each(function (
+          this: HTMLElement
+        ) {
           const bg = $(this).attr("data-background");
           if (bg) $(this).css("background-image", String(bg));
         });
@@ -62,9 +66,9 @@ export default function HeroCarousel() {
       const bindOwlEvents = () => {
         $carousel.on("initialized.owl.carousel", function () {
           setTimeout(() => {
-            $("#carousel-home .owl-carousel .owl-item.active .owl-slide-animated").addClass(
-              "is-transitioned"
-            );
+            $(
+              "#carousel-home .owl-carousel .owl-item.active .owl-slide-animated"
+            ).addClass("is-transitioned");
           }, 200);
         });
 
@@ -72,7 +76,9 @@ export default function HeroCarousel() {
           const evt = e as { item: { index: number } };
           $(".owl-slide-animated").removeClass("is-transitioned");
           const $currentOwlItem = $(".owl-item").eq(evt.item.index);
-          $currentOwlItem.find(".owl-slide-animated").addClass("is-transitioned");
+          $currentOwlItem
+            .find(".owl-slide-animated")
+            .addClass("is-transitioned");
         });
       };
 
