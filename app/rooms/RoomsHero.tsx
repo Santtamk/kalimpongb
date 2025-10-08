@@ -24,7 +24,7 @@ type JQ = ((selector: string) => JQObject) & {
 
 type WindowWithJQuery = Window & { jQuery?: JQ; $?: JQ };
 
-const AboutUs = () => {
+const RoomsHero = () => {
   useEffect(() => {
     let disposed = false;
     let attempts = 0;
@@ -126,7 +126,7 @@ const AboutUs = () => {
         <div
           className="owl-slide background-image relative bg-cover bg-center
                      !min-h-[100dvh] md:!min-h-[70vh] lg:!min-h-[80vh]"
-          data-background="url(/img/aboutUs/about1.png)"
+          data-background="url(/img/gallery/23.jpg)"
         >
           <div
             className="opacity-mask flex items-center h-full"
@@ -137,10 +137,10 @@ const AboutUs = () => {
                 <div className="col-lg-6 static">
                   <div className="slide-text white text-center">
                     <small className="owl-slide-animated owl-slide-title">
-                      Your home in Kalimpong
+                      Spaces to Settle In
                     </small>
                     <h2 className="owl-slide-animated owl-slide-title-2">
-                      More than a place to stay
+                      Where every detail is crafted for peace and rest.
                     </h2>
                   </div>
                 </div>
@@ -153,4 +153,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default RoomsHero;
