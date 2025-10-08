@@ -34,7 +34,7 @@ export default function RoomsSection() {
       name: "Double Room with Balcony",
       price: "From ₹₹₹₹/night",
       desc: "A cozy 28 m² retreat with a large double bed, private bathroom, and balcony view. Perfect for couples or solo travelers looking for a peaceful, simple, and homely stay. Thoughtfully equipped with fresh linen, a wardrobe, and an electric kettle for your comfort.",
-      images: ["/img/rooms/10.JPG", "/img/rooms/33.JPG"],
+      images: ["/img/rooms/10.JPG", "/img/rooms/20.JPG"],
       delay: "300",
     },
     {
@@ -92,6 +92,8 @@ export default function RoomsSection() {
           charm and modern ease. From heritage-inspired interiors to views of
           lush gardens and misty hills, every stay is a retreat for the senses.
         </p> */}
+
+        
       </div>
 
       {/* Rooms loop: each entry renders a row with an Owl carousel and a details column */}

@@ -16,7 +16,7 @@ const navigationItems = [
   {
     id: 2,
     label: "Rooms",
-    href: "#rooms",
+    href: "/rooms",
     className: "js-scroll-trigger animated_link",
   },
   {

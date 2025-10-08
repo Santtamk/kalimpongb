@@ -6,6 +6,7 @@ import MapAndFooter from "@/components/MapAndFooter";
 import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
 import RouteReinit from "@/components/RouteReinit";
+import ContactsBooking from "../components/ContactsBooking";
 
 // Fonts must be declared at module scope
 const caveat = Caveat({ subsets: ["latin"], weight: ["400", "500"] });
@@ -99,6 +100,7 @@ export default function RootLayout({
         <Header />
         <RouteReinit />
         {children}
+        <ContactsBooking />
         <MapAndFooter />
         {/* COMMON SCRIPTS from template (order matters) */}
         <Script src="/js/common_scripts.js" strategy="afterInteractive" />
