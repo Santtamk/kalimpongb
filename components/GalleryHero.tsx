@@ -62,22 +62,10 @@ const GalleryHero = () => {
       if ($carousel.length === 0) return;
 
       const bindOwlEvents = () => {
-        $carousel.on("initialized.owl.carousel", function () {
-          setTimeout(() => {
-            $(
-              "#carousel-home .owl-carousel .owl-item.active .owl-slide-animated"
-            ).addClass("is-transitioned");
-          }, 200);
-        });
-
-        $carousel.on("changed.owl.carousel", function (e?: unknown) {
-          const evt = e as { item: { index: number } };
-          $(".owl-slide-animated").removeClass("is-transitioned");
-          const $currentOwlItem = $(".owl-item").eq(evt.item.index);
-          $currentOwlItem
-            .find(".owl-slide-animated")
-            .addClass("is-transitioned");
-        });
+        // Always show hero text for single-slide carousels
+        setTimeout(() => {
+          $carousel.find(".owl-slide-animated").addClass("is-transitioned");
+        }, 200);
       };
 
       // Initialize or refresh Owl Carousel
