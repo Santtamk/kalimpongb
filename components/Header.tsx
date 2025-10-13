@@ -8,6 +8,12 @@ import Link from "next/link";
 // Navigation items data map
 const navigationItems = [
   {
+    id: 0,
+    label: "Home",
+    href: "/",
+    className: "js-scroll-trigger animated_link",
+  },
+  {
     id: 1,
     label: "About",
     href: "/about-us",
@@ -22,7 +28,7 @@ const navigationItems = [
   {
     id: 3,
     label: "Gallery",
-    href: "#gallery",
+    href: "/gallery",
     className: "js-scroll-trigger animated_link",
   },
   {
