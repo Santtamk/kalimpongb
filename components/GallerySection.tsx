@@ -1,7 +1,10 @@
+"use client";
 /**
  * GallerySection
  * Owl Carousel image gallery with fslightbox links.
  */
+
+import React, { useEffect } from "react";
 
 // Gallery images data map - generates array for all 40 images
 const generateGalleryImages = () => {
@@ -22,6 +25,13 @@ const galleryImages = generateGalleryImages();
 // const featuredImages = galleryImages.slice(0, 40);
 
 export default function GallerySection() {
+  useEffect(() => {
+    // Refresh fslightbox to ensure it detects the new links
+    if (typeof window !== "undefined" && (window as any).refreshFsLightbox) {
+      (window as any).refreshFsLightbox();
+    }
+  }, []);
+
   return (
     <div className="container margin_120" id="gallery">
       <div className="row">
