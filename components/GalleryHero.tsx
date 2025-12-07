@@ -37,15 +37,15 @@ const GalleryHero = () => {
                       <div className="col-lg-6 static">
                         <div className="slide-text white text-center">
                           <small
-                            className={`owl-slide-animated owl-slide-title ${
-                              isLoaded ? "is-transitioned" : ""
+                            className={`hero-animate-init owl-slide-title ${
+                              isLoaded ? "hero-animate-visible" : ""
                             }`}
                           >
                             Where Stillness Resides.
                           </small>
                           <h2
-                            className={`owl-slide-animated owl-slide-title-2 ${
-                              isLoaded ? "is-transitioned" : ""
+                            className={`hero-animate-init delay-200 owl-slide-title-2 ${
+                              isLoaded ? "hero-animate-visible" : ""
                             }`}
                           >
                             A glimpse into our quiet world.
