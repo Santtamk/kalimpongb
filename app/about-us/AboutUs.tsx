@@ -37,15 +37,15 @@ const AboutUs = () => {
                       <div className="col-lg-6 static">
                         <div className="slide-text white text-center">
                           <small
-                            className={`owl-slide-animated owl-slide-title ${
-                              isLoaded ? "is-transitioned" : ""
+                            className={`hero-animate-init owl-slide-title ${
+                              isLoaded ? "hero-animate-visible" : ""
                             }`}
                           >
                             Your home in Kalimpong
                           </small>
                           <h2
-                            className={`owl-slide-animated owl-slide-title-2 ${
-                              isLoaded ? "is-transitioned" : ""
+                            className={`hero-animate-init delay-200 owl-slide-title-2 ${
+                              isLoaded ? "hero-animate-visible" : ""
                             }`}
                           >
                             More than a place to stay
