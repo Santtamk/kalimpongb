@@ -27,8 +27,11 @@ const galleryImages = generateGalleryImages();
 export default function GallerySection() {
   useEffect(() => {
     // Refresh fslightbox to ensure it detects the new links
-    if (typeof window !== "undefined" && (window as any).refreshFsLightbox) {
-      (window as any).refreshFsLightbox();
+    if (typeof window !== "undefined") {
+      const w = window as unknown as { refreshFsLightbox?: () => void };
+      if (w.refreshFsLightbox) {
+        w.refreshFsLightbox();
+      }
     }
   }, []);
 
