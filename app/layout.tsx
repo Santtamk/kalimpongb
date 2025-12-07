@@ -7,6 +7,7 @@ import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
 import RouteReinit from "@/components/RouteReinit";
 import ContactsBooking from "../components/ContactsBooking";
+import { Analytics } from "@vercel/analytics/react";
 
 // Fonts must be declared at module scope
 const caveat = Caveat({ subsets: ["latin"], weight: ["400", "500"] });
@@ -111,6 +112,7 @@ export default function RootLayout({
         <Script src="/js/scrolling-nav.js" strategy="afterInteractive" />
         {/* SPECIFIC (home slider if used) */}
         <Script src="/js/slider.js" strategy="afterInteractive" />
+        <Analytics />
       </body>
     </html>
   );
