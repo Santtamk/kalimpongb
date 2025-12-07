@@ -4,7 +4,6 @@ import GallerySection from "@/components/GallerySection";
 export const metadata = {
   title: "Gallery | Kalimpong Bungalow",
 };
-
 export default function GalleryPage() {
   return (
     <main>
