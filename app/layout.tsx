@@ -104,8 +104,8 @@ export default function RootLayout({
         <ContactsBooking />
         <MapAndFooter />
         {/* COMMON SCRIPTS from template (order matters) */}
-        <Script src="/js/common_scripts.js" strategy="lazyOnload" />
-        <Script src="/js/common_functions.js" strategy="lazyOnload" />
+        <Script src="/js/common_scripts.js" strategy="afterInteractive" />
+        <Script src="/js/common_functions.js" strategy="afterInteractive" />
         <Script src="/js/datepicker_inline.js" strategy="lazyOnload" />
         <Script src="/phpmailer/validate.js" strategy="lazyOnload" />
         <Script src="/js/jquery.easing.min.js" strategy="lazyOnload" />
