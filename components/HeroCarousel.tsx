@@ -6,6 +6,7 @@
  * Now initializes on client mount to support SPA navigation.
  */
 import React, { useEffect } from "react";
+import NextImage from "next/image";
 
 // Minimal jQuery types used here
 type JQObject = {
@@ -124,10 +125,16 @@ export default function HeroCarousel() {
       <div className="owl-carousel owl-theme kenburns">
         {/* Slide 1 */}
         <div
-          className="owl-slide background-image relative bg-cover bg-center
+          className="owl-slide relative
                      !min-h-[100dvh] md:!min-h-[70vh] lg:!min-h-[80vh]"
-          data-background="url(/img/slides/slide_2.jpg)"
         >
+          <NextImage
+            src="/img/slides/slide_2.jpg"
+            alt="An Authentic Cultural Retreat"
+            fill
+            priority
+            className="object-cover -z-10"
+          />
           <div
             className="opacity-mask flex items-center h-full"
             data-opacity-mask="rgba(0, 0, 0, 0.5)"
@@ -159,10 +166,15 @@ export default function HeroCarousel() {
 
         {/* Slide 2 */}
         <div
-          className="owl-slide background-image relative bg-cover bg-center
+          className="owl-slide relative
                      !min-h-[100dvh] md:!min-h-[70vh] lg:!min-h-[80vh]"
-          data-background="url(/img/slides/slide_1.jpg)"
         >
+          <NextImage
+            src="/img/slides/slide_1.jpg"
+            alt="Where Every Stay Feels Like a Story"
+            fill
+            className="object-cover -z-10"
+          />
           <div
             className="opacity-mask flex items-center h-full"
             data-opacity-mask="rgba(0, 0, 0, 0.5)"
@@ -194,10 +206,15 @@ export default function HeroCarousel() {
 
         {/* Slide 3 */}
         <div
-          className="owl-slide background-image relative bg-cover bg-center
+          className="owl-slide relative
                      !min-h-[100dvh] md:!min-h-[70vh] lg:!min-h-[80vh]"
-          data-background="url(/img/slides/slide_3.jpg)"
         >
+          <NextImage
+            src="/img/slides/slide_3.jpg"
+            alt="Your Heritage Escape in the Hills"
+            fill
+            className="object-cover -z-10"
+          />
           <div
             className="opacity-mask flex items-center h-full"
             data-opacity-mask="rgba(0, 0, 0, 0.6)"

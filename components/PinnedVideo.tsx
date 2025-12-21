@@ -12,61 +12,59 @@ export default function PinnedVideo() {
 
   const videos = ["/video/Video_10.mp4", "/video/Video_20.mp4"];
 
+  /* Visibility tracking for lazy loading/playing */
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.2 } // Play when 20% visible
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Effect to manage playback based on visibility and current video
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isInView) {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.log("Auto-play prevented or interrupted:", error);
+        });
+      }
+    } else {
+      video.pause();
+    }
+  }, [isInView, currentVideoIndex]);
+
+  // Original event listeners logic (kept for looping, but removed auto-play logic inside)
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
     const handleVideoEnd = () => {
       console.log(`Video ${currentVideoIndex} ended, switching to next`);
-      // Move to next video, or loop back to first
       setCurrentVideoIndex((prevIndex) => {
         const nextIndex = prevIndex === videos.length - 1 ? 0 : prevIndex + 1;
-        console.log(`Switching from video ${prevIndex} to video ${nextIndex}`);
         return nextIndex;
       });
     };
 
-    const handleVideoLoad = () => {
-      console.log(`Video ${currentVideoIndex} loaded, starting playback`);
-      // Auto-play when video loads
-      video.play().catch((error) => {
-        console.log("Auto-play prevented:", error);
-      });
-    };
-
-    const handleCanPlay = () => {
-      console.log(`Video ${currentVideoIndex} can play`);
-      video.play().catch((error) => {
-        console.log("Auto-play prevented:", error);
-      });
-    };
-
-    // Add multiple event listeners to ensure playback
     video.addEventListener("ended", handleVideoEnd);
-    video.addEventListener("loadeddata", handleVideoLoad);
-    video.addEventListener("canplay", handleCanPlay);
-
     return () => {
       video.removeEventListener("ended", handleVideoEnd);
-      video.removeEventListener("loadeddata", handleVideoLoad);
-      video.removeEventListener("canplay", handleCanPlay);
     };
-  }, [currentVideoIndex, videos.length]); // Re-run when currentVideoIndex changes
-
-  // Additional effect to ensure video plays when component mounts or video changes
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    // Small delay to ensure video is ready
-    const timer = setTimeout(() => {
-      video.play().catch((error) => {
-        console.log("Auto-play prevented:", error);
-      });
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, [currentVideoIndex]);
+  }, [currentVideoIndex, videos.length]);
 
   return (
     <div className="bg_white">
@@ -75,7 +73,7 @@ export default function PinnedVideo() {
           <video
             ref={videoRef}
             muted
-            autoPlay
+            preload="none"
             playsInline
             id="video_home"
             className="w-full h-full object-cover"
