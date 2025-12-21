@@ -61,7 +61,7 @@ export default function AboutSection() {
                     width={300}
                     height={200}
                     className="rounded-img"
-                    style={{ width: "100%", height: "auto" }}
+                    style={{ height: "auto" }}
                   />
                 </span>
               </div>
