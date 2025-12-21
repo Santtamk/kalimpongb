@@ -205,7 +205,7 @@ body {
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-display: swap; font-family: "Montserrat", Helvetica, sans-serif;
   color: #333;
 }
 
@@ -1000,7 +1000,7 @@ img.jarallax-img.kenburns-2 {
   position: relative;
 }
 .styled-select.lang-selector:after {
-  font-family: "bootstrap-icons";
+  font-display: swap; font-family: "bootstrap-icons";
   content: "\F3EE";
   color: #fff;
   position: absolute;
@@ -1066,7 +1066,7 @@ img.jarallax-img.kenburns-2 {
 /* 2.  CONTENT */
 /*============================================================================================*/
 .intro em {
-  font-family: "Caveat", cursive;
+  font-display: swap; font-family: "Caveat", cursive;
   font-size: 32px;
   font-size: 2rem;
   font-style: normal;
@@ -1979,7 +1979,7 @@ a.box_cat_rooms:hover .background-image {
   position: absolute;
   left: 0;
   top: -7px;
-  font-family: "bootstrap-icons";
+  font-display: swap; font-family: "bootstrap-icons";
   content: "\F19F";
   font-size: 32px;
   font-size: 2rem;
@@ -2129,7 +2129,7 @@ img.rounded-img {
 /*-------- 3.2 Datepicker --------*/
 .daterangepicker {
   border: 0 !important;
-  font-family: "Montserrat", Helvetica, sans-serif !important;
+  font-display: swap; font-family: "Montserrat", Helvetica, sans-serif !important;
 }
 
 .daterangepicker .calendar-table th {

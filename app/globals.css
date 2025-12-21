@@ -42,3 +42,4 @@ body {
 .delay-200 {
   transition-delay: 0.2s;
 }
+@font-face { font-family: 'hotel icons'; font-display: swap; } @font-face { font-family: 'hotel'; font-display: swap; } @font-face { font-family: 'spa'; font-display: swap; }

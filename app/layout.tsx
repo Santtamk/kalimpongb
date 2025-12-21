@@ -104,14 +104,14 @@ export default function RootLayout({
         <ContactsBooking />
         <MapAndFooter />
         {/* COMMON SCRIPTS from template (order matters) */}
-        <Script src="/js/common_scripts.js" strategy="afterInteractive" />
-        <Script src="/js/common_functions.js" strategy="afterInteractive" />
-        <Script src="/js/datepicker_inline.js" strategy="afterInteractive" />
-        <Script src="/phpmailer/validate.js" strategy="afterInteractive" />
-        <Script src="/js/jquery.easing.min.js" strategy="afterInteractive" />
-        <Script src="/js/scrolling-nav.js" strategy="afterInteractive" />
+        <Script src="/js/common_scripts.js" strategy="lazyOnload" />
+        <Script src="/js/common_functions.js" strategy="lazyOnload" />
+        <Script src="/js/datepicker_inline.js" strategy="lazyOnload" />
+        <Script src="/phpmailer/validate.js" strategy="lazyOnload" />
+        <Script src="/js/jquery.easing.min.js" strategy="lazyOnload" />
+        <Script src="/js/scrolling-nav.js" strategy="lazyOnload" />
         {/* SPECIFIC (home slider if used) */}
-        <Script src="/js/slider.js" strategy="afterInteractive" />
+        <Script src="/js/slider.js" strategy="lazyOnload" />
         <Analytics />
       </body>
     </html>
