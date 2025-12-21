@@ -4,6 +4,7 @@
  */
 
 import Link from "next/link";
+import Image from "next/image";
 
 // Navigation items data map
 const navigationItems = [
@@ -54,20 +55,21 @@ export default function Header() {
         <div className="row align-items-center">
           <div className="col-md-3 col-5">
             <Link href="/" className="logo_normal">
-              <img
+              <Image
                 src="/img/logo-removebg-small1.png"
-                width="150"
-                height="30"
-                alt=""
+                width={150}
+                height={30}
+                alt="Kalimpong Bungalow Logo"
                 className="img-fluid"
+                priority
               />
             </Link>
             <Link href="/" className="logo_sticky">
-              <img
+              <Image
                 src="/img/logo-removebg-small1.png"
-                width="150"
-                height="30"
-                alt=""
+                width={150}
+                height={30}
+                alt="Kalimpong Bungalow Logo"
                 className="img-fluid"
               />
             </Link>
@@ -78,11 +80,11 @@ export default function Header() {
                 <i className="bi bi-x"></i>
               </button>
               <div className="logo_panel">
-                <img
+                <Image
                   src="/img/logo.jpeg"
-                  width="180"
-                  height="34"
-                  alt=""
+                  width={180}
+                  height={34}
+                  alt="Kalimpong Bungalow Logo"
                   className="img-fluid"
                 />
               </div>

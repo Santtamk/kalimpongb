@@ -2,6 +2,7 @@
  * TestimonialsParallax
  * Jarallax parallax background with Owl Carousel testimonials.
  */
+import Image from "next/image";
 
 // Testimonials data map
 const testimonialsData = [
@@ -56,9 +57,11 @@ export default function TestimonialsParallax() {
                     <div className="box_overlay">
                       <div className="pic">
                         <figure>
-                          <img
+                          <Image
                             src={testimonial.image}
                             alt={`${testimonial.name} testimonial`}
+                            width={50}
+                            height={50}
                             className="img-circle"
                           />
                         </figure>

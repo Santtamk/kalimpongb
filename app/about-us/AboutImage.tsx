@@ -1,4 +1,5 @@
 import React, { useId } from "react";
+import Image from "next/image";
 
 type ImageProp =
   | string
@@ -82,11 +83,12 @@ const AboutImage: React.FC<AboutImageProps> = ({
         className={`hidden lg:flex items-center gap-8 px-6 lg:px-12 py-12 ${lgDir}`}
       >
         {/* Image column */}
-        <div className="w-full lg:w-1/2 flex-shrink-0">
-          <img
+        <div className="w-full lg:w-1/2 flex-shrink-0 relative">
+          <Image
             src={desktop}
             alt={alt}
-            loading="lazy"
+            width={800}
+            height={600}
             className="w-full h-auto object-cover rounded-2xl shadow-lg"
             style={{ maxHeight: "70vh" }}
           />

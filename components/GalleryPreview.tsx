@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function GalleryPreview() {
   return (
@@ -30,10 +31,12 @@ export default function GalleryPreview() {
             href="/gallery"
             className="rounded-img overflow-hidden w-100 d-block"
           >
-            <img
+            <Image
               src="/img/gallery/1.jpg"
               alt="Preview 1"
               className="img-fluid"
+              width={200}
+              height={300}
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </Link>
@@ -44,10 +47,12 @@ export default function GalleryPreview() {
             href="/gallery"
             className="rounded-img overflow-hidden w-100 d-block"
           >
-            <img
+            <Image
               src="/img/gallery/2.jpg"
               alt="Preview 2"
               className="img-fluid"
+              width={200}
+              height={300}
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </Link>
@@ -58,10 +63,12 @@ export default function GalleryPreview() {
             href="/gallery"
             className="rounded-img overflow-hidden w-100 d-block"
           >
-            <img
+            <Image
               src="/img/gallery/3.jpg"
               alt="Preview 3"
               className="img-fluid"
+              width={300}
+              height={300}
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </Link>
@@ -73,10 +80,12 @@ export default function GalleryPreview() {
               href="/gallery"
               className="rounded-img overflow-hidden d-block flex-fill"
             >
-              <img
+              <Image
                 src="/img/gallery/4.jpg"
                 alt="Preview 4"
                 className="img-fluid"
+                width={200}
+                height={150}
                 style={{ objectFit: "cover", width: "100%", height: "100%" }}
               />
             </Link>
@@ -84,10 +93,12 @@ export default function GalleryPreview() {
               href="/gallery"
               className="rounded-img overflow-hidden d-block flex-fill"
             >
-              <img
+              <Image
                 src="/img/gallery/5.jpg"
                 alt="Preview 5"
                 className="img-fluid"
+                width={200}
+                height={150}
                 style={{ objectFit: "cover", width: "100%", height: "100%" }}
               />
             </Link>
@@ -99,10 +110,12 @@ export default function GalleryPreview() {
             href="/gallery"
             className="rounded-img overflow-hidden w-100 d-block"
           >
-            <img
+            <Image
               src="/img/gallery/6.jpg"
               alt="Preview 6"
               className="img-fluid"
+              width={300}
+              height={300}
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </Link>

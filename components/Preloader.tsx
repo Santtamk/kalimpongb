@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 /**
  * Preloader
@@ -40,12 +41,13 @@ export default function Preloader() {
   return (
     <div id="preloader" className="preloader-overlay">
       <div className="preloader-logo-wrap" aria-label="Loading">
-        <img
+        <Image
           src="/img/logo-removebg-small.png"
           alt="Logo"
           className="preloader-logo"
           width={180}
           height={46}
+          priority
         />
       </div>
     </div>

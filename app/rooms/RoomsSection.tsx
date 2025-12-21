@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 /**
  * RoomsSection
  * Data-driven rendering of the Rooms + Main Facilities sections.
@@ -118,10 +120,13 @@ export default function RoomsSection() {
                     <div className="item" key={idx}>
                       <a data-fslightbox={group} data-type="image" href={src}>
                         <div className="room-image-container">
-                          <img
+                          <Image
                             src={src}
                             alt={`${room.name} - Image ${idx + 1}`}
+                            width={800}
+                            height={600}
                             className="room-image"
+                            style={{ width: "100%", height: "auto" }}
                           />
                         </div>
                       </a>

@@ -5,6 +5,14 @@
  */
 
 import React, { useEffect } from "react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+
+// Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 // Gallery images data map - generates array for all 40 images
 const generateGalleryImages = () => {
@@ -20,9 +28,6 @@ const generateGalleryImages = () => {
 };
 
 const galleryImages = generateGalleryImages();
-
-// // Featured images for carousel display (first 40 images)
-// const featuredImages = galleryImages.slice(0, 40);
 
 export default function GallerySection() {
   useEffect(() => {
@@ -46,13 +51,60 @@ export default function GallerySection() {
         </div>
       </div>
       <div data-cues="zoomIn">
-        <div className="owl-carousel owl-theme carousel_item_centered kenburns rounded-img">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          loop={true} // Enable looping for smoother experience with many images
+          coverflowEffect={{
+            rotate: 0, // No rotation for cleaner look
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+            slideShadows: false,
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true, // Better for large number of images
+          }}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          className="mySwiper"
+          style={{ paddingBottom: '50px' }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1.5,
+              spaceBetween: 10
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            }
+          }}
+        >
           {galleryImages.map((image) => (
-            <div key={image.id} className="item">
-              <img src={image.src} alt={image.alt} />
-            </div>
+            <SwiperSlide key={image.id} style={{ width: '400px', maxWidth: '90vw' }}>
+              <div className="item rounded-img overflow-hidden position-relative" style={{ height: '300px' }}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-fit-cover"
+                />
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
       <div className="text-center mt-5">
         {galleryImages.map((image, index) => (
@@ -71,3 +123,4 @@ export default function GallerySection() {
     </div>
   );
 }
+
