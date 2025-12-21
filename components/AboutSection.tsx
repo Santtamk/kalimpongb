@@ -56,11 +56,12 @@ export default function AboutSection() {
               <div data-cue="slideInUp" className="img_over">
                 <span data-jarallax-element="-30">
                   <Image
-                    src="/img/aboutUs/aboutUs2.svg"
+                    src="/img/aboutUs/aboutUs2.jpeg"
                     alt="Decorative pattern"
-                    width={100}
-                    height={100}
+                    width={300}
+                    height={200}
                     className="rounded-img"
+                    style={{ width: "100%", height: "auto" }}
                   />
                 </span>
               </div>

@@ -37,6 +37,7 @@ export default function GalleryPreview() {
               className="img-fluid"
               width={200}
               height={300}
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </Link>
@@ -53,6 +54,7 @@ export default function GalleryPreview() {
               className="img-fluid"
               width={200}
               height={300}
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </Link>
@@ -69,6 +71,7 @@ export default function GalleryPreview() {
               className="img-fluid"
               width={300}
               height={300}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </Link>
@@ -86,6 +89,7 @@ export default function GalleryPreview() {
                 className="img-fluid"
                 width={200}
                 height={150}
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
                 style={{ objectFit: "cover", width: "100%", height: "100%" }}
               />
             </Link>
@@ -99,6 +103,7 @@ export default function GalleryPreview() {
                 className="img-fluid"
                 width={200}
                 height={150}
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
                 style={{ objectFit: "cover", width: "100%", height: "100%" }}
               />
             </Link>
@@ -116,6 +121,7 @@ export default function GalleryPreview() {
               className="img-fluid"
               width={300}
               height={300}
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </Link>

@@ -35,10 +35,12 @@ const testimonialsData = [
 export default function TestimonialsParallax() {
   return (
     <div className="parallax_section_1 jarallax" data-jarallax data-speed="0.2">
-      <img
-        className="jarallax-img kenburns-2"
+      <Image
         src="/img/testimonials/testimonials_bg.jpg"
         alt="testimonials background"
+        fill
+        className="jarallax-img kenburns-2 object-cover"
+        quality={60}
       />
       <div
         className="wrapper opacity-mask d-flex align-items-center justify-content-center text-center"

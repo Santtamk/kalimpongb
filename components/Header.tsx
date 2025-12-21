@@ -57,8 +57,8 @@ export default function Header() {
             <Link href="/" className="logo_normal">
               <Image
                 src="/img/logo-removebg-small1.png"
-                width={150}
-                height={30}
+                width={140}
+                height={105}
                 alt="Kalimpong Bungalow Logo"
                 className="img-fluid"
                 priority
@@ -67,8 +67,8 @@ export default function Header() {
             <Link href="/" className="logo_sticky">
               <Image
                 src="/img/logo-removebg-small1.png"
-                width={150}
-                height={30}
+                width={140}
+                height={105}
                 alt="Kalimpong Bungalow Logo"
                 className="img-fluid"
               />
