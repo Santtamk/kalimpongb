@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 /**
  * AboutSection
@@ -45,16 +46,20 @@ export default function AboutSection() {
         <div className="row justify-content-between flex-lg-row-reverse align-items-center">
           <div className="col-lg-5">
             <div className="parallax_wrapper">
-              <img
+              <Image
                 src="/img/aboutUs/AboutUs1.png"
-                alt=""
+                alt="About Kalimpong Bungalow"
+                width={600}
+                height={400}
                 className="img-fluid rounded-img scale-x-[-1]"
               />
               <div data-cue="slideInUp" className="img_over">
                 <span data-jarallax-element="-30">
-                  <img
+                  <Image
                     src="/img/aboutUs/aboutUs2.svg"
-                    alt=""
+                    alt="Decorative pattern"
+                    width={100}
+                    height={100}
                     className="rounded-img"
                   />
                 </span>

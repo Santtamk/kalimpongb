@@ -1,6 +1,6 @@
 import React from "react";
-
 import Link from "next/link";
+import Image from "next/image";
 
 /**
  * AboutSection
@@ -13,16 +13,20 @@ export default function RoomSection() {
         <div className="row justify-content-between flex-lg-row-reverse align-items-center">
           <div className="col-lg-5">
             <div className="parallax_wrapper">
-              <img
+              <Image
                 src="/img/gallery/6.jpg"
-                alt=""
+                alt="Room interior"
+                width={800}
+                height={600}
                 className="img-fluid rounded-img scale-x-[-1]"
               />
               <div data-cue="slideInUp" className="img_over">
                 <span data-jarallax-element="-30">
-                  <img
+                  <Image
                     src="/img/gallery/9.jpg"
-                    alt=""
+                    alt="Room detail"
+                    width={400}
+                    height={300}
                     className="rounded-img"
                   />
                 </span>
