@@ -41,7 +41,7 @@ const navigationItems = [
   {
     id: 5,
     label: "Book Now",
-    href: "#booking_section",
+    href: "https://bookingengine.stayflexi.com/?hotel_id=34942",
     className: "js-scroll-trigger btn_1",
     isButton: true,
   },
@@ -94,6 +94,15 @@ export default function Header() {
                     <li key={item.id}>
                       {item.href.startsWith("#") ? (
                         <a href={item.href} className={item.className}>
+                          {item.label}
+                        </a>
+                      ) : item.href.startsWith("http") ? (
+                        <a
+                          href={item.href}
+                          className={item.className}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           {item.label}
                         </a>
                       ) : (
