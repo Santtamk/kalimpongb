@@ -34,7 +34,7 @@ export default function RoomsSection() {
     {
       id: 1,
       name: "Double Room with Balcony",
-      price: "From ₹₹₹₹/night",
+      price: "Heritage Experience",
       desc: "A cozy 28 m² retreat with a large double bed, private bathroom, and balcony view. Perfect for couples or solo travelers looking for a peaceful, simple, and homely stay. Thoughtfully equipped with fresh linen, a wardrobe, and an electric kettle for your comfort.",
       images: ["/img/rooms/10.JPG", "/img/rooms/20.JPG"],
       delay: "300",
@@ -42,7 +42,7 @@ export default function RoomsSection() {
     {
       id: 2,
       name: "Deluxe Double Room with Balcony",
-      price: "From ₹₹₹₹/night",
+      price: "Premium Comfort",
       desc: "A more spacious 28 m² room offering refined comfort with a large double bed, private bathroom, and scenic balcony. Ideal for guests who want a little extra elegance while enjoying Kalimpong’s charm. Complete with soft linens, a wardrobe, and modern amenities for a relaxed yet indulgent stay.",
       images: ["/img/gallery/10.jpg", "/img/gallery/12.jpg"],
       inverted: true,
@@ -50,7 +50,7 @@ export default function RoomsSection() {
     {
       id: 3,
       name: "Standard Double Room",
-      price: "From ₹₹₹₹/night",
+      price: "Cozy Retreat",
       desc: "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
       images: ["/img/gallery/15.jpg", "/img/gallery/24.jpg"],
     },
