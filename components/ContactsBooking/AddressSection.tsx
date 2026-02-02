@@ -36,7 +36,7 @@ export default function AddressSection() {
 
         {/* Check-in and Check-out Information */}
         <div className="phone_element no_borders ">
-          <a href="#0">
+          <div className="d-flex align-items-center">
             <i className="bi bi-clock"></i>
             <span>
               <em>Check-in</em>From 12:00 to 19:00
@@ -45,42 +45,37 @@ export default function AddressSection() {
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 title="You'll need to let the property know in advance what time you'll arrive."
-                style={{ cursor: "info" }}
+                style={{ cursor: "help" }}
               >
                 <i className="bi bi-info-circle"></i>
               </small>
             </span>
-          </a>
+          </div>
         </div>
-        <div className="phone_element no_borders !pointer-events-none !cursor-default">
-          <a href="#0">
+        <div className="phone_element no_borders">
+          <div className="d-flex align-items-center">
             <i className="bi bi-clock-history"></i>
             <span>
               <em>Check-out</em>From 06:00 to 11:00
             </span>
-          </a>
+          </div>
         </div>
 
         <div className="social mt-4">
           <ul>
             <li>
-              <a href="#0">
+              <a href="https://www.instagram.com/kalimpongbungalow/" target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-instagram"></i>
               </a>
             </li>
             <li>
-              <a href="#0">
+              <a href="https://wa.me/917908676707" target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-whatsapp"></i>
               </a>
             </li>
             <li>
-              <a href="#0">
+              <a href="https://www.facebook.com/kalimpongbungalow/" target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#0">
-                <i className="bi bi-twitter-x"></i>
               </a>
             </li>
           </ul>
