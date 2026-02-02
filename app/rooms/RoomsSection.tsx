@@ -33,7 +33,7 @@ export default function RoomsSection() {
   const rooms: Room[] = [
     {
       id: 1,
-      name: "Double Room with Balcony",
+      name: "Double Deluxe Room with Balcony",
       price: "Heritage Experience",
       desc: "A cozy 28 m² retreat with a large double bed, private bathroom, and balcony view. Perfect for couples or solo travelers looking for a peaceful, simple, and homely stay. Thoughtfully equipped with fresh linen, a wardrobe, and an electric kettle for your comfort.",
       images: ["/img/rooms/10.JPG", "/img/rooms/20.JPG"],
@@ -41,18 +41,34 @@ export default function RoomsSection() {
     },
     {
       id: 2,
-      name: "Deluxe Double Room with Balcony",
+      name: "Standard Deluxe Room",
       price: "Premium Comfort",
       desc: "A more spacious 28 m² room offering refined comfort with a large double bed, private bathroom, and scenic balcony. Ideal for guests who want a little extra elegance while enjoying Kalimpong’s charm. Complete with soft linens, a wardrobe, and modern amenities for a relaxed yet indulgent stay.",
       images: ["/img/gallery/10.jpg", "/img/gallery/12.jpg"],
       inverted: true,
     },
     {
-      id: 3,
-      name: "Standard Double Room",
-      price: "Cozy Retreat",
-      desc: "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
-      images: ["/img/gallery/15.jpg", "/img/gallery/24.jpg"],
+      id: 4,
+      name: "Traditional Muna Madan Cottage",
+      price: "Folklore & Tradition",
+      desc: "Inspired by the timeless Nepali epic, this cottage embodies love and longing. With rustic stone walls and traditional decor, it transports you to a simpler, poetic era of Himalayan life.",
+      images: [
+        "/img/rooms/munamadan/munaMadan.jpeg",
+        "/img/rooms/munamadan/munaMadan3.jpeg",
+        "/img/rooms/munamadan/munamadan1.PNG",
+      ],
+    },
+    {
+      id: 5,
+      name: "Suite Cottage",
+      price: "Colonial Elegance",
+      desc: "Paying homage to the legacy of Dr. Graham's Homes, this suite blends colonial charm with modern luxury. Experience the grace of a bygone era in this spacious, heritage-themed retreat.",
+      images: [
+        "/img/rooms/cottage/cottage.jpeg",
+        "/img/rooms/cottage/cottage1.jpeg",
+        "/img/rooms/cottage/cottage2.jpeg",
+      ],
+      inverted: true,
     },
   ];
 
