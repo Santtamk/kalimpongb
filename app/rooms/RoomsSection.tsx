@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 /**
  * RoomsSection
@@ -13,7 +14,7 @@ type Room = {
   name: string;
   price: string; // e.g., "From $150/night"
   desc: string;
-  images: string[]; // Absolute paths under /public (e.g., "/img/rooms/1.jpg")
+  images: Array<string | { src: string; position?: string }>; // Absolute paths under /public (e.g., "/img/rooms/1.jpg"); use { src, position } to override the crop focus (e.g., "top")
   inverted?: boolean; // If true, swaps the columns on xl (matches template's second row)
   delay?: string; // Optional animation delay for the row (e.g., "300")
 };
@@ -32,19 +33,21 @@ export default function RoomsSection() {
   // Rooms content — add, remove, or edit entries; images should exist under /public/img/rooms
   const rooms: Room[] = [
     {
-      id: 1,
-      name: "Double Deluxe Room with Balcony",
-      price: "Heritage Experience",
-      desc: "A cozy 28 m² retreat with a large double bed, private bathroom, and balcony view. Perfect for couples or solo travelers looking for a peaceful, simple, and homely stay. Thoughtfully equipped with fresh linen, a wardrobe, and an electric kettle for your comfort.",
-      images: ["/img/rooms/10.JPG", "/img/rooms/20.JPG"],
-      delay: "300",
-    },
-    {
       id: 2,
       name: "Standard Deluxe Room",
       price: "Premium Comfort",
       desc: "A more spacious 28 m² room offering refined comfort with a large double bed, private bathroom, and scenic balcony. Ideal for guests who want a little extra elegance while enjoying Kalimpong’s charm. Complete with soft linens, a wardrobe, and modern amenities for a relaxed yet indulgent stay.",
-      images: ["/img/gallery/10.jpg", "/img/gallery/12.jpg"],
+      images: [
+        "/img/rooms/standarddelux/standarddelux1.jpeg",
+        "/img/rooms/standarddelux/standarddelux2.jpeg",
+        "/img/rooms/standarddelux/standarddelux3.jpeg",
+        "/img/rooms/standarddelux/standarddelux4.jpeg",
+        "/img/rooms/standarddelux/standarddelux5.jpeg",
+        "/img/rooms/standarddelux/standarddelux6.jpeg",
+        "/img/rooms/standarddelux/standarddelux7.jpeg",
+        "/img/rooms/standarddelux/standarddelux8.jpeg",
+        "/img/rooms/standarddelux/standarddelux9.jpeg",
+      ],
       inverted: true,
     },
     {
@@ -56,6 +59,10 @@ export default function RoomsSection() {
         "/img/rooms/munamadan/munaMadan.jpeg",
         "/img/rooms/munamadan/munaMadan3.jpeg",
         "/img/rooms/munamadan/munamadan1.PNG",
+        "/img/rooms/munamadan/munaMadan4.jpeg",
+        { src: "/img/rooms/munamadan/munaMadan5.jpeg", position: "top" },
+        "/img/rooms/munamadan/munaMadan6.jpeg",
+        "/img/rooms/munamadan/munaMadan7.jpeg",
       ],
     },
     {
@@ -64,11 +71,20 @@ export default function RoomsSection() {
       price: "Colonial Elegance",
       desc: "Paying homage to the legacy of Dr. Graham's Homes, this suite blends colonial charm with modern luxury. Experience the grace of a bygone era in this spacious, heritage-themed retreat.",
       images: [
+        "/img/rooms/cottage/cottage5.jpeg",
         "/img/rooms/cottage/cottage.jpeg",
         "/img/rooms/cottage/cottage1.jpeg",
         "/img/rooms/cottage/cottage2.jpeg",
       ],
       inverted: true,
+    },
+    {
+      id: 1,
+      name: "Double Deluxe Room with Balcony",
+      price: "Heritage Experience",
+      desc: "A cozy 28 m² retreat with a large double bed, private bathroom, and balcony view. Perfect for couples or solo travelers looking for a peaceful, simple, and homely stay. Thoughtfully equipped with fresh linen, a wardrobe, and an electric kettle for your comfort.",
+      images: ["/img/rooms/10.JPG", "/img/rooms/20.JPG"],
+      delay: "300",
     },
   ];
 
@@ -129,25 +145,41 @@ export default function RoomsSection() {
               <div className={`col-xl-8${room.inverted ? " order-xl-2" : ""}`}>
                 {/*
                   Vendor note: the classes below are required by Owl Carousel and the template
-                  effects (kenburns, rounded-img). Do not remove unless you migrate the slider.
+                  effects (rounded-img). Do not remove unless you migrate the slider.
+                  "kenburns" is intentionally omitted here — it drives a continuous CSS
+                  animation on the <img> that fights the hover zoom transition in custom.css,
+                  making the hover scale snap instead of ease.
                 */}
-                <div className="owl-carousel owl-theme carousel_item_1 kenburns rounded-img">
-                  {room.images.map((src, idx) => (
-                    <div className="item" key={idx}>
-                      <a data-fslightbox={group} data-type="image" href={src}>
-                        <div className="room-image-container">
-                          <Image
-                            src={src}
-                            alt={`${room.name} - Image ${idx + 1}`}
-                            width={800}
-                            height={600}
-                            className="room-image"
-                            style={{ width: "100%", height: "auto" }}
-                          />
-                        </div>
-                      </a>
-                    </div>
-                  ))}
+                <div className="owl-carousel owl-theme carousel_item_1 rounded-img">
+                  {room.images.map((image, idx) => {
+                    const src = typeof image === "string" ? image : image.src;
+                    const position =
+                      typeof image === "string" ? undefined : image.position;
+                    return (
+                      <div className="item" key={idx}>
+                        <a data-fslightbox={group} data-type="image" href={src}>
+                          <div className="room-image-container">
+                            <Image
+                              src={src}
+                              alt={`${room.name} - Image ${idx + 1}`}
+                              width={800}
+                              height={600}
+                              className="room-image"
+                              style={
+                                {
+                                  width: "100%",
+                                  height: "auto",
+                                  ...(position && {
+                                    "--room-image-position": position,
+                                  }),
+                                } as CSSProperties
+                              }
+                            />
+                          </div>
+                        </a>
+                      </div>
+                    );
+                  })}
                 </div>
                 {/* /carousel */}
               </div>

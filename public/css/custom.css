@@ -238,6 +238,12 @@ header.fixed_header {
   overflow: hidden !important;
   border-radius: 8px !important;
   background-color: #f5f5f5 !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08) !important;
+  transition: box-shadow 0.5s ease !important;
+}
+
+.room-image-container:hover {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18) !important;
 }
 
 /* Room image styling */
@@ -248,13 +254,14 @@ header.fixed_header {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important; /* Maintains aspect ratio, crops if needed */
-  object-position: center !important; /* Centers the image */
-  transition: transform 0.3s ease !important;
+  /* Defaults to center; a room can override via inline --room-image-position (e.g. "top") */
+  object-position: var(--room-image-position, center) !important;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* Hover effect for room images */
+/* Hover effect for room images: slow, subtle zoom for a boutique feel */
 .room-image-container:hover .room-image {
-  transform: scale(1.05) !important;
+  transform: scale(1.06) !important;
 }
 
 /* Ensure Owl Carousel items have consistent height */
@@ -291,5 +298,23 @@ header.fixed_header {
 
   .carousel_item_1 .item {
     min-height: 180px !important;
+  }
+}
+
+/* ============================= */
+/* AMENITY HIGHLIGHT (logo + text band, e.g. in-house cafe) */
+/* ============================= */
+
+.brand_logo_badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (max-width: 768px) {
+  .brand_logo_badge {
+    max-width: 280px;
   }
 }
